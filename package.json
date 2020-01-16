@@ -1,0 +1,10 @@
+{
+  "name": "typescript-generics",
+  "version": "1.0.0",
+  "main": "js/app.js",
+  "author": "Josh Gretz <jgretz@truefit.io>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node js/main.js"
+  }
+}
