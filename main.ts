@@ -24,17 +24,35 @@ const intArray: number[] = [1, 2, 3];
 // console.log(shortenArray(intArray, 2));
 
 // section 3.2
-import { MeetingResource } from "./models/meetingResource";
+// import { MeetingResource } from "./models/meetingResource";
+// import { ConferenceRoom, conferenceRoomData } from "./models/conferenceRoom";
+// import { PartyTent, partyTentData } from "./models/partyTent";
+// import { Building, buildingData } from "./models/building";
+
+// const getBigRooms = <T extends MeetingResource>(
+//   rooms: T[],
+//   minSize: number
+// ): T[] => rooms.filter((r: T) => r.capacity >= minSize);
+
+// const bigRooms = getBigRooms(partyTentData, 20);
+// console.log(bigRooms.map(x => x.name));
+
+// section 4.1
+// import { Stack } from "./stack";
+
+// const numberStack: Stack<number> = new Stack<number>();
+// numberStack.push(1);
+// numberStack.push(2);
+// numberStack.push(3);
+
+// console.log(numberStack.pop());
+// console.log(numberStack.peek());
+// console.log(numberStack.pop());
+// console.log(numberStack.pop());
+
+// section 4.2
 import { ConferenceRoom, conferenceRoomData } from "./models/conferenceRoom";
-import { PartyTent, partyTentData } from "./models/partyTent";
-import { Building, buildingData } from "./models/building";
+import { Reservation } from "./models/reservation";
 
-const getBigRooms = <T extends MeetingResource>(
-  rooms: T[],
-  minSize: number
-): T[] => rooms.filter((r: T) => r.capacity >= minSize);
-
-const bigRooms = getBigRooms(partyTentData, 20);
-console.log(bigRooms.map(x => x.name));
-
-// section 4
+const meeting = new Reservation<ConferenceRoom>();
+meeting.requestResource(conferenceRoomData[0], "Gary");
